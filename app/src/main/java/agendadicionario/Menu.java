@@ -5,9 +5,9 @@ import java.util.Scanner;
 import agendadicionario.contatos.ContatoTelefone;
 import agendadicionario.contatos.ContatoWhatsApp;
 
-//import agendacontatos.contatos.ContatoEmail;
-//import agendacontatos.contatos.ContatoTelefone;
-//import agendacontatos.contatos.ContatoWhatsApp;
+import agendacontatos.contatos.ContatoEmail;
+import agendacontatos.contatos.ContatoTelefone;
+import agendacontatos.contatos.ContatoWhatsApp;
 
 public class Menu {
     private Agenda agenda; 
@@ -34,7 +34,8 @@ public class Menu {
                     case 1:
                         System.out.print("Aniversário: ");
                         int aniversario = leitor.nextInt();
-                        agenda.adicionarContato(new ContatoTelefone(nomeTelefone, telefone, aniversario)); //ver como faz em dicionario
+                        ContatoTelefone novoContato = new ContatoTelefone(telefone, nomeTelefone, aniversario);
+                        agenda.put(contato, novoContato);
                         break;
                     case 2:
                         System.out.print("Email: ");

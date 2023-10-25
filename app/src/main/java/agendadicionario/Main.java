@@ -12,7 +12,7 @@ public class Main {
 
       if (opcao == 1) {
         Agenda agenda = new Agenda();
-        //Menu menu = new Menu(agenda);
+        Menu menu = new Menu(agenda);
 
         while(true){
           System.out.println("\n*** Menu ***\n1 - Adicionar contato\n2 - Remover contato\n3 - Atualizar conato\n4 - Listar contatos\n0 - Sair\n");
@@ -21,7 +21,7 @@ public class Main {
           if (opcao == 0){
             break;
           } else if (opcao == 1){
-            //menu.menuAdicionar(opcao); // recebeu argumento // tem que fazer o menu adiconar
+            menu.menuAdicionar(opcao); // recebeu argumento // tem que fazer o menu adiconar
           } else if (opcao == 4){
             agenda.listarContatos();
           } else if (opcao == 2){
